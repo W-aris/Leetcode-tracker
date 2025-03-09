@@ -1,0 +1,350 @@
+/* Global Styles */
+body {
+    background-color: black; /* Default background color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+    color: white; /* Default text color */
+  }
+  
+  body.light {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Heading Styles */
+  h1, h2, h3, h4, h5, h6 {
+    transition: color 0.3s ease;
+  }
+  
+  body.light h1, body.light h2, body.light h3, body.light h4, body.light h5, body.light h6 {
+    color: black; /* Black color for light mode */
+  }
+  
+  body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+    color: white; /* White color for dark mode */
+  }
+  
+  /* Card styles */
+  .card {
+    background: white; /* White background */
+    color: black; /* Black text color */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 12px; /* Smaller border radius for a sleeker look */
+    padding: 1rem; /* Less padding */
+    border: 1px solid #e0e0e0; /* Light border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 220px; /* Adjusted width for slimmer appearance */
+    margin: 10px; /* Spacing between cards */
+  }
+  
+  .card img {
+    width: 24px; /* Smaller icon size */
+    height: 24px;
+    margin-bottom: 10px; /* Spacing below the icon */
+  }
+  
+  .card .title {
+    font-size: 1.2rem; /* Adjusted font size */
+    font-weight: 600; /* Bold font */
+    color: #333; /* Darker text color */
+    margin: 10px 0; /* Spacing above and below the title */
+  }
+  
+  .card .details {
+    font-size: 0.9rem; /* Smaller font size for details */
+    color: #666; /* Lighter text color for details */
+    margin-bottom: 10px; /* Spacing below the details */
+  }
+  
+  .card .progress-bar {
+    width: 100%;
+    height: 8px; /* Slimmer progress bar */
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px; /* Spacing above the progress bar */
+  }
+  
+  .card .progress-bar .progress {
+    height: 100%;
+    background-color: #4caf50; /* Green progress color */
+    width: 50%; /* Example progress */
+    transition: width 0.3s ease-in-out;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adjust gap between cards */
+    padding: 20px;
+  }
+  
+  .card .status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Spacing below the status */
+  }
+  
+  .card .status span {
+    font-size: 0.9rem; /* Smaller font size for status text */
+    color: #333; /* Darker text color for status */
+    margin-left: 5px; /* Spacing to the right of the icon */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Slightly larger shadow on hover */
+  }
+  
+  
+  .card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card h6 {
+    font-size: 1rem;
+    color: #ff6347; /* Tomato color for Not Yet Started text */
+  }
+  
+  .card .status-icon {
+    font-size: 2rem;
+  }
+  
+  .question-link {
+    color: #2196f3; /* Blue color for links */
+    text-decoration: none;
+  }
+  
+  .question-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Checkbox Container */
+  .checkbox-container label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .checkbox-container span {
+    margin-left: 0.5rem;
+  }
+  
+  /* Container styles */
+  .containerstyles {
+    height: 20px;
+    width: auto;
+    background-color: #e0e0de;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  /* Responsive styles for container */
+  @media (max-width: 800px) {
+    .containerstyles {
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    position: sticky;
+    top: 0;
+    background-color: #38a169; /* Green color */
+    z-index: 50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    padding: 0.75rem 1.5rem; /* Padding for better spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .title {
+    font-size: 2rem; /* Larger font size */
+    font-weight: bold;
+    color: white; /* White color for dark mode */
+  }
+  
+  body.light .navbar .title {
+    color: black; /* Black color for light mode */
+  }
+  
+  .navbar .controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between elements */
+  }
+  
+  .navbar .controls div,
+  .navbar .controls img {
+    color: white; /* White color for dark mode */
+  }
+  
+  body.light .navbar .controls div,
+  body.light .navbar .controls img {
+    color: black; /* Black color for light mode */
+  }
+  
+  .navbar .controls img {
+    width: 1.5rem; /* Fixed width */
+    height: 1.5rem; /* Fixed height */
+  }
+  
+  /* Toggle Switch */
+  .toggle-switch {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-switch:before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle-switch.active {
+    background: #94f097; /* Green for active state */
+  }
+  
+  .toggle-switch.active:before {
+    transform: translateX(20px);
+  }
+  
+  /* Status styles */
+  .status {
+    transition: all 0.5s ease; /* Smooth transition */
+    opacity: 1;
+  }
+  
+  .status.hidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .status.visible {
+    opacity: 1;
+    height: auto;
+  }
+  
+  .status .alert {
+    background-color: #f6e05e; /* Yellow color */
+    color: black;
+    padding: 1rem;
+    border-radius: 0.375rem; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    margin-top: 1rem;
+  }
+  
+  body.light {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  body.dark {
+    background-color: #333;
+    color: #f4f4f4;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #282c34;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .title {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .tracker-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #61dafb;
+    text-decoration: none;
+  }
+  
+  .tracker-title:hover {
+    color: #21a1f1;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-switch {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-switch.active {
+    background-color: #61dafb;
+  }
+  
+  .toggle-switch::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  .toggle-switch.active::before {
+    transform: translateX(20px);
+  }
+  
+  .tips {
+    cursor: pointer;
+  }
+  
+  .tips img {
+    width: 24px;
+    height: 24px;
+  }
+  

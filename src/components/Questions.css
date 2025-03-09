@@ -1,0 +1,156 @@
+/* Questions Component Styles */
+.questions-container {
+    margin-bottom: 20px;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  /* Header Styles */
+  .questions-header {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  body.light .questions-header {
+    color: black;
+  }
+  
+  .questions-title-section h1 {
+    font-size: 2.5rem; /* Larger font size for the title */
+    font-weight: bold;
+    color: white;
+  }
+  
+  body.light .questions-title-section h1 {
+    color: black;
+  }
+  
+  .questions-breadcrumb-section p {
+    font-size: 1.25rem; /* Slightly larger font size for breadcrumb */
+    color: white;
+  }
+  
+  body.light .questions-breadcrumb-section p {
+    color: black;
+  }
+  
+  .questions-cards-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  @media (min-width: 640px) {
+    .questions-cards-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .questions-cards-section {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Card styles */
+  .questions-card {
+    background: white;
+    color: black;
+    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default shadow */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  body.dark .questions-card {
+    background: #333;
+    color: white;
+  }
+  
+  .questions-card.completed {
+    background: #e0f7e0; /* Light green background for completed cards */
+  }
+  
+  .questions-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .questions-card-body {
+    padding: 1rem;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .questions-link {
+    color: #0073e6; /* Blue color for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem; /* Increased font size */
+  }
+  
+  .questions-link:hover {
+    text-decoration: underline;
+  }
+  
+  .questions-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .mark-done-button {
+    background: none;
+    border: 1px solid currentColor;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .questions-card.completed .mark-done-button {
+    background-color: #4caf50; /* Green background for done button */
+    color: white;
+  }
+  
+  .mark-done-button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Slight background on hover */
+  }
+  
+  .mark-done-button.completed:hover {
+    background-color: #388e3c; /* Darker green on hover */
+  }
+  
+  /* Completed Bar */
+  .completed-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #4caf50; /* Green color for the completed bar */
+  }
+  
+  /* Not Completed Bar */
+  .not-completed-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #f44336; /* Red color for the not completed bar */
+  }
+  
